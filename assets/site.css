@@ -1,0 +1,113 @@
+/* LateFrame website. Brand: Inter Tight (self-hosted), graphite + signal yellow, see the brand guide. */
+@font-face { font-family: "Inter Tight"; font-weight: 400; font-display: swap; src: url("fonts/InterTight-400.woff2") format("woff2"); }
+@font-face { font-family: "Inter Tight"; font-weight: 600; font-display: swap; src: url("fonts/InterTight-600.woff2") format("woff2"); }
+@font-face { font-family: "Inter Tight"; font-weight: 800; font-display: swap; src: url("fonts/InterTight-800.woff2") format("woff2"); }
+
+:root {
+  --yellow: #FFD21F;
+  --graphite: #0F1012;
+  --panel: #16181C;
+  --line: #24272C;
+  --chalk: #F4F1EA;
+  --body: #D9DCE1;
+  --steel: #A3A8B0;
+  --max: 1080px;
+  --gutter: 24px;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--graphite);
+  color: var(--body);
+  font-family: "Inter Tight", -apple-system, system-ui, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--chalk); text-decoration-color: var(--yellow); text-underline-offset: 3px; }
+a:hover { color: var(--yellow); }
+img { display: block; max-width: 100%; }
+
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+
+/* Header */
+.site-header { border-bottom: 1px solid var(--line); }
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 76px; }
+.lockup { display: flex; align-items: center; gap: 6px; text-decoration: none; }
+.lockup .mark { width: 44px; height: 44px; }
+.lockup .word { height: 23px; width: auto; }
+.nav { display: flex; gap: 22px; font-size: 16px; }
+.nav a { text-decoration: none; color: var(--steel); }
+.nav a:hover, .nav a[aria-current="page"] { color: var(--chalk); }
+
+/* Hero */
+.hero { padding: 96px 0 72px; }
+.eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--yellow); margin: 0 0 18px; }
+h1, h2, h3 { color: var(--chalk); font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; margin: 0; }
+h1 { font-size: clamp(48px, 9vw, 104px); }
+.lead { font-size: clamp(19px, 2.4vw, 24px); line-height: 1.45; color: var(--body); max-width: 760px; margin: 26px 0 0; }
+.cta { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-top: 40px; }
+.pill { display: inline-flex; align-items: center; gap: 10px; padding: 14px 22px; border-radius: 999px; font-weight: 600; font-size: 17px; text-decoration: none; }
+.pill-yellow { background: var(--yellow); color: var(--graphite); }
+.pill-yellow:hover { color: var(--graphite); background: #FFE36B; }
+.cta-note { color: var(--steel); font-size: 16px; }
+
+/* Framed moment (the brand's corner device) */
+.frame { position: relative; padding: 44px; }
+.frame::before, .frame::after, .frame > .c3, .frame > .c4 { content: ""; position: absolute; width: 34px; height: 34px; border: 0 solid var(--yellow); }
+.frame::before { left: 0; top: 0; border-left-width: 5px; border-top-width: 5px; }
+.frame::after { right: 0; top: 0; border-right-width: 5px; border-top-width: 5px; }
+.frame > .c3 { left: 0; bottom: 0; border-left-width: 5px; border-bottom-width: 5px; }
+.frame > .c4 { right: 0; bottom: 0; border-right-width: 5px; border-bottom-width: 5px; }
+
+/* Features */
+.section { padding: 72px 0; border-top: 1px solid var(--line); }
+.section h2 { font-size: clamp(32px, 5vw, 48px); margin-bottom: 36px; }
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.card { background: var(--panel); border-radius: 18px; padding: 28px; }
+.card h3 { font-size: 22px; letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 10px; }
+.card p { margin: 0; font-size: 17px; }
+.label { font-size: 13px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--yellow); margin-bottom: 14px; }
+
+.origin { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: center; }
+.origin blockquote { margin: 0; font-size: clamp(28px, 4vw, 40px); font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; color: var(--chalk); }
+
+/* Long-form pages (privacy, support) */
+.doc { padding: 72px 0 96px; max-width: 760px; }
+.doc h1 { font-size: clamp(40px, 7vw, 64px); }
+.doc .updated { color: var(--steel); font-size: 15px; margin: 14px 0 40px; }
+.doc h2 { font-size: 26px; letter-spacing: -0.02em; margin: 44px 0 12px; }
+.doc p, .doc li { font-size: 18px; }
+.doc ul { padding-left: 22px; }
+.doc li { margin: 6px 0; }
+.summary { background: var(--panel); border-radius: 18px; padding: 24px 28px; margin: 0 0 8px; border-left: 4px solid var(--yellow); }
+.summary p { margin: 0; color: var(--chalk); }
+.faq details { border-top: 1px solid var(--line); padding: 18px 0; }
+.faq details:last-child { border-bottom: 1px solid var(--line); }
+.faq summary { cursor: pointer; font-weight: 600; color: var(--chalk); font-size: 19px; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; color: var(--yellow); font-weight: 400; font-size: 24px; line-height: 1; }
+.faq details[open] summary::after { content: "−"; }
+.faq details p { margin: 12px 0 0; }
+.contact { display: inline-block; margin-top: 8px; font-size: 22px; font-weight: 600; }
+
+/* Footer */
+.site-footer { border-top: 1px solid var(--line); padding: 36px 0 48px; color: var(--steel); font-size: 15px; }
+.site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; }
+.site-footer nav { display: flex; gap: 20px; }
+.site-footer a { color: var(--steel); text-decoration: none; }
+.site-footer a:hover { color: var(--chalk); }
+
+@media (max-width: 760px) {
+  :root { --gutter: 16px; }
+  .hero { padding: 64px 0 48px; }
+  .grid, .origin { grid-template-columns: minmax(0, 1fr); }
+  .section { padding: 56px 0; }
+  .nav { gap: 16px; }
+  .lockup .mark { width: 36px; height: 36px; }
+  .lockup .word { height: 19px; }
+  .frame { padding: 32px 24px; }
+}
