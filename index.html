@@ -10,15 +10,28 @@
 <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/InterTight-800.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/site.css?v=2">
+<script>
+  // The intro (assets/intro.js) starts from a bare page: logo figure, wordmark and links appear as the
+  // figure lands. Skipped for reduced motion. If the script never runs, show the finished page anyway.
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.documentElement.classList.add('intro');
+    window.lfIntroFallback = setTimeout(() => document.documentElement.classList.remove('intro'), 3000);
+  }
+</script>
+<script src="assets/intro.js?v=1" defer></script>
 </head>
 <body>
-<main class="teaser">
+<main class="teaser" id="teaser">
 <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
-<div class="lockup" role="img" aria-label="LateFrame"><img class="mark" src="assets/mark.svg" alt=""><img class="word" src="assets/wordmark.svg" alt=""></div>
-<h1>Watch<br>every attempt.</h1>
-<span class="soon">Coming soon to the App Store</span>
-<nav class="legal" aria-label="Legal"><a href="privacy/">Privacy</a><a href="support/">Support</a></nav>
+<div class="lockup big" role="img" aria-label="LateFrame">
+  <div class="markbox" id="markbox"><img src="assets/mark-corners.svg" alt=""><img class="figure" src="assets/mark-figure.svg" alt=""></div>
+  <span class="wordwrap"><img class="word" src="assets/wordmark.svg" alt=""></span>
+</div>
+<h1 id="headline"><span class="ln"><span class="bl"></span>Watch</span><br><span class="ln"><span class="bl"></span>every attempt.</span></h1>
+<span class="soon fade d1">Coming soon to the App Store</span>
+<nav class="legal fade d2" aria-label="Legal"><a href="privacy/">Privacy</a><a href="support/">Support</a></nav>
+<svg class="stage" id="stage" aria-hidden="true"><g class="rig" id="ghost2" opacity="0"></g><g class="rig" id="ghost1" opacity="0"></g><g class="rig" id="actor"></g></svg>
 </main>
 </body>
 </html>
