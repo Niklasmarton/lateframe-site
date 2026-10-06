@@ -111,3 +111,30 @@ h1 { font-size: clamp(48px, 9vw, 104px); }
   .lockup .word { height: 19px; }
   .frame { padding: 32px 24px; }
 }
+
+/* Teaser front page (design B on the canvas: the page is the viewfinder) */
+.teaser { position: relative; min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 36px; padding: 120px 40px; text-align: center; }
+.teaser .corner { position: absolute; width: 90px; height: 90px; border: 0 solid var(--yellow); }
+.teaser .tl { left: 48px; top: 48px; border-left-width: 7px; border-top-width: 7px; }
+.teaser .tr { right: 48px; top: 48px; border-right-width: 7px; border-top-width: 7px; }
+.teaser .bl { left: 48px; bottom: 48px; border-left-width: 7px; border-bottom-width: 7px; }
+.teaser .br { right: 48px; bottom: 48px; border-right-width: 7px; border-bottom-width: 7px; }
+.teaser .lockup .mark { width: 56px; height: 56px; }
+.teaser .lockup .word { height: 29px; }
+.teaser h1 { font-size: clamp(46px, 7.4vw, 104px); line-height: 1.02; letter-spacing: -0.035em; }
+.teaser .soon { display: inline-flex; align-items: center; padding: 15px 26px; border-radius: 999px; box-shadow: inset 0 0 0 2px var(--yellow); color: var(--yellow); font-weight: 600; font-size: 19px; }
+.teaser .legal { position: absolute; left: 0; right: 0; bottom: 28px; display: flex; justify-content: center; gap: 22px; font-size: 14px; }
+.teaser .legal a { color: #5A5F66; text-decoration: none; }
+.teaser .legal a:hover { color: var(--chalk); }
+@media (max-width: 760px) {
+  .teaser { gap: 26px; padding: 100px 28px; }
+  .teaser .corner { width: 44px; height: 44px; }
+  .teaser .tl, .teaser .tr { top: 20px; } .teaser .bl, .teaser .br { bottom: 20px; }
+  .teaser .tl, .teaser .bl { left: 20px; } .teaser .tr, .teaser .br { right: 20px; }
+  .teaser .tl { border-left-width: 5px; border-top-width: 5px; } .teaser .tr { border-right-width: 5px; border-top-width: 5px; }
+  .teaser .bl { border-left-width: 5px; border-bottom-width: 5px; } .teaser .br { border-right-width: 5px; border-bottom-width: 5px; }
+  .teaser .lockup .mark { width: 40px; height: 40px; }
+  .teaser .lockup .word { height: 21px; }
+  .teaser .soon { font-size: 16px; padding: 13px 22px; }
+  .teaser .legal { bottom: 30px; font-size: 13px; }
+}
