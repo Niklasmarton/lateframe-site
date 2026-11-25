@@ -149,12 +149,12 @@ h1 { font-size: clamp(48px, 9vw, 104px); }
 .lockup.big .wordwrap .word { height: calc(var(--m) * 0.518); margin-left: calc(var(--m) * 0.12); max-width: none; }
 .teaser h1 .bl { display: inline-block; width: 0; height: 0; vertical-align: baseline; }
 .teaser .stage { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
-.intro .lockup.big .wordwrap { max-width: 0; transition: max-width 2s cubic-bezier(.25,.6,.2,1) 0.14s; }
+.intro .lockup.big .wordwrap { max-width: 0; transition: max-width 1.2s cubic-bezier(.25,.6,.2,1) 0.14s; }
 .intro .lockup.big .markbox .figure { opacity: 0; }
 .intro .teaser .fade { opacity: 0; transform: translateY(8px); transition: opacity 2s ease, transform 2s ease; }
 .intro .teaser .rig { transition: opacity 0.12s linear; }
 /* The wordmark opens to its own width (wordmark.svg is 6.036 times as wide as high, plus its left margin,
-   plus 0.2 % so no edge is cut off), so the opening takes the whole 2 s at every size. A fixed, wider
+   plus 0.2 % so no edge is cut off), so the opening takes the whole transition at every size. A fixed, wider
    max-width made it finish early, and sooner on phones. */
 .intro .done .lockup.big .wordwrap { max-width: calc(var(--m) * 3.252); }
 .intro .done .lockup.big .markbox .figure { opacity: 1; }
