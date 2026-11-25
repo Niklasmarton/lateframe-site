@@ -122,7 +122,8 @@ h1 { font-size: clamp(48px, 9vw, 104px); }
 .teaser .lockup .mark { width: 56px; height: 56px; }
 .teaser .lockup .word { height: 29px; }
 .teaser h1 { font-size: clamp(46px, 7.4vw, 104px); line-height: 1.02; letter-spacing: -0.035em; }
-.teaser .soon { display: inline-flex; align-items: center; padding: 15px 26px; border-radius: 999px; box-shadow: inset 0 0 0 2px var(--yellow); color: var(--yellow); font-weight: 600; font-size: 19px; }
+.teaser .store { display: inline-flex; align-items: center; padding: 15px 26px; border-radius: 999px; box-shadow: inset 0 0 0 2px var(--yellow); color: var(--yellow); font-weight: 600; font-size: 19px; text-decoration: none; transition: background-color 0.2s ease, color 0.2s ease; }
+.teaser .store:hover, .teaser .store:focus-visible { background: var(--yellow); color: var(--graphite); outline: none; }
 .teaser .legal { position: absolute; left: 0; right: 0; bottom: 28px; display: flex; justify-content: center; gap: 22px; font-size: 14px; }
 .teaser .legal a { color: #5A5F66; text-decoration: none; }
 .teaser .legal a:hover { color: var(--chalk); }
@@ -135,7 +136,7 @@ h1 { font-size: clamp(48px, 9vw, 104px); }
   .teaser .bl { border-left-width: 5px; border-bottom-width: 5px; } .teaser .br { border-right-width: 5px; border-bottom-width: 5px; }
   .teaser .lockup .mark { width: 40px; height: 40px; }
   .teaser .lockup .word { height: 21px; }
-  .teaser .soon { font-size: 16px; padding: 13px 22px; }
+  .teaser .store { font-size: 16px; padding: 13px 22px; }
   .teaser .legal { bottom: 30px; font-size: 13px; }
 }
 
